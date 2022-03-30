@@ -1,4 +1,4 @@
 <!doctype HTML>
 <html>
-    <h1>Hello World!</h1>
+    <h1 text-align="center">Hello World!</h1>
 </html>
