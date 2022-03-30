@@ -43,7 +43,7 @@ if(isset($_POST['submit'])&&!empty($_POST['submit'])){
   
   <div class="form-group">
     <label for="sname">Surname:</label>
-    <input type="email" class="form-control" id="sname" placeholder="Enter surname" name="sname">
+    <input type="text" class="form-control" id="sname" placeholder="Enter surname" name="sname">
   </div>
   
   <div class="form-group">
