@@ -4,15 +4,20 @@ $connection_string = "postgresql://database:udrYG95AL1O0Ypwl@app-c6f3a3d0-e486-4
 $dbconn = pg_connect($connection_string);
 
 if(isset($_POST['submit'])&&!empty($_POST['submit'])){
+
+  $username = $_POST['username'];
+  $fname = $_POST['fname'];
+  $sname = $_POST['sname'];
+  $pwd = $_POST['pwd'];
     
-    $sql = "insert into public.user(username,fname, sname, pwd)values('".$_POST['username']."','".$_POST['fname']."','".$_POST['sname']."','".md5($_POST['pwd'])."')";
+  $sql = "INSERT INTO user (username,fname, sname, pwd)VALUES($username, $fname, $sname, $pwd)";
   $ret = pg_query($dbconn, $sql);
   if($ret){
       
           echo "Data saved Successfully";
   }else{
       
-          echo "Soething Went Wrong";
+          echo "Something Went Wrong";
   }
 }
 
